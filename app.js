@@ -25,11 +25,6 @@ anskeysContainer.classList = "anskey-container";
 for (let i = 0; i < randomWord.length; i++) {
     const answerKey = document.createElement("div")
     answerKey.classList = "answerkeys";
-
-    // show answer
-    // answerKey.innerHTML = randomWord.substring(i).substring(0,1);
-
-
     anskeysContainer.appendChild(answerKey)
 }
 //KEYS WRITE
@@ -53,21 +48,32 @@ gcontainer.appendChild(anskeysContainer)
 container.appendChild(keysContainer)
 
 const keystyle = document.querySelectorAll(".keystyle")
+const answerkeys = document.querySelectorAll(".answerkeys")
+
+
+
 for (let i = 0; i < keys.length; i++) {
     keystyle[i].addEventListener("click", (e) => {
         const clickItem = e.target.textContent;
         var randomWordArray = []
         for (let i = 0; i < randomWord.length; i++) {
-            randomWordArray.push(randomWord.substring(i).substring(0,1))         
+            randomWordArray.push(randomWord.substring(i).substring(0,1))     
         }
+
        
             if (randomWordArray.includes(clickItem)) {
-                keystyle[i].style.background = "darkgreen"
+                keystyle[i].style.background = "darkgreen"           
                 console.log("var");
+                // for (let i = 0; i < answerkeys.length; i++) {
+                //     answerkeys[i].innerHTML = randomWord.substring(i).substring(0, 1);
+                // } 
             }else{
                 keystyle[i].style.opacity = "0.20"
-            }
-       
-    }) 
+            }        
+     
 
+
+    }) 
 }
+
+// answerKey.innerHTML = randomWord.substring(i).substring(0, 1);
