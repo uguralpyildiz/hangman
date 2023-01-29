@@ -64,6 +64,10 @@ for (let i = 0; i < keys.length; i++) {
             if (randomWordArray.includes(clickItem)) {
                 keystyle[i].style.background = "darkgreen"           
                 console.log("var");
+                console.log(clickItem);
+                // if (condition) {
+                    
+                // }
                 // for (let i = 0; i < answerkeys.length; i++) {
                 //     answerkeys[i].innerHTML = randomWord.substring(i).substring(0, 1);
                 // } 
