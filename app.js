@@ -26,6 +26,7 @@ for (let i = 0; i < randomWord.length; i++) {
     const answerKey = document.createElement("div")
     answerKey.classList = "answerkeys";
     anskeysContainer.appendChild(answerKey)
+    answerKey.innerHTML = randomWord.substring(i).substring(0, 1);
 }
 //KEYS WRITE
 
@@ -65,12 +66,7 @@ for (let i = 0; i < keys.length; i++) {
                 keystyle[i].style.background = "darkgreen"           
                 console.log("var");
                 console.log(clickItem);
-                // if (condition) {
-                    
-                // }
-                // for (let i = 0; i < answerkeys.length; i++) {
-                //     answerkeys[i].innerHTML = randomWord.substring(i).substring(0, 1);
-                // } 
+
             }else{
                 keystyle[i].style.opacity = "0.20"
             }        
@@ -80,4 +76,4 @@ for (let i = 0; i < keys.length; i++) {
     }) 
 }
 
-// answerKey.innerHTML = randomWord.substring(i).substring(0, 1);
+// 
