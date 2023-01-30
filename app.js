@@ -50,8 +50,15 @@ container.appendChild(keysContainer)
 
 const keystyle = document.querySelectorAll(".keystyle")
 const answerkeys = document.querySelectorAll(".answerkeys")
+const answerArray = [];
+function hiddenAns() {
+    for (let i = 0; i < answerkeys.length; i++) {
+        answerkeys[i].style.opacity = "0.2";
+        answerArray.push(answerkeys[i].textContent)
+    }
+}
 
-
+hiddenAns()
 
 for (let i = 0; i < keys.length; i++) {
     keystyle[i].addEventListener("click", (e) => {
@@ -60,19 +67,26 @@ for (let i = 0; i < keys.length; i++) {
         for (let i = 0; i < randomWord.length; i++) {
             randomWordArray.push(randomWord.substring(i).substring(0,1))     
         }
+        
+        console.log(clickItem);
+        console.log(answerArray[1]);
+
+        for (let i = 0; i < answerkeys.length; i++) {
+            if (clickItem === answerArray[i]) {
+                answerkeys[i].style.opacity = "1"
+            }
+            
+        }
+
 
        
             if (randomWordArray.includes(clickItem)) {
-                keystyle[i].style.background = "darkgreen"           
-                console.log("var");
-                console.log(clickItem);
-
+                keystyle[i].style.background = "darkgreen"
+                           
             }else{
                 keystyle[i].style.opacity = "0.20"
             }        
      
-
-
     }) 
 }
 
