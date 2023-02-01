@@ -96,7 +96,14 @@ function index() {
 
             if (randomWord.length === ansCount) {
                 console.log("reset");
-                
+                     
+                for (let i = 0; i < keystyle.length; i++) {
+                    randomWordArray.splice(0, i)
+                    keystyle[i].style.opacity = "1"
+                    keystyle[i].style.background = "black"       
+                }
+                console.log(randomWordArray);
+
             }
 
         })
